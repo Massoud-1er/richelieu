@@ -1,0 +1,23 @@
+{
+  "name": "richelieu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/massoud-1er/Richelieu.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/massoud-1er/Richelieu/issues"
+  },
+  "homepage": "https://github.com/massoud-1er/Richelieu#readme",
+  "dependencies": {
+    "big-integer": "^1.6.43",
+    "fs": "0.0.1-security"
+  }
+}
