@@ -5,12 +5,12 @@ function string_format(big_int) {
     return(inline.replace(/(\d{2})/g, '$1:'))
 }
 
-export function format(modulus, priv_exp, prime1, prime2, exponent1, exponent2, coef) {
+module.exports = function format(modulus, priv_exp, prime1, prime2, exponent1, exponent2, coef) {
     console.log("Private-Key: (4096 bit)\nmodulus:\n    " + string_format(modulus))
     console.log("publicExponent: 10001 (0x2711)\nprivateExponent:\n    " + string_format(priv_exp))
-    console.log("prime1:\n    " + prime1)
-    console.log("prime2:\n    " + prime2)
-    console.log("exponent1:\n    " + exponent1)
-    console.log("exponent2:\n    " + exponent2)
-    console.log("coefficient:\n    " + coef)
+    console.log("prime1:\n    " + string_format(prime1))
+    console.log("prime2:\n    " + string_format(prime2))
+    console.log("exponent1:\n    " + string_format(exponent1))
+    console.log("exponent2:\n    " + string_format(exponent2))
+    console.log("coefficient:\n    " + string_format(coef))
 }
