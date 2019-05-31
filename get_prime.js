@@ -5,7 +5,7 @@ const formatting = require('./formatting')
 
 const e = new BigInt('10001')
 var i = 0
-
+var nb = 0
 function get_info (p, q)
 {
 	p.subtract(1)
@@ -22,7 +22,12 @@ function get_info (p, q)
 	qi = q
 	qi.modInverse(p)
 	// console.log(modulo, e, d, p, q, dp, dq, qi)
-	formatting(modulo, d, p, q, dp, dq, qi)
+	var filename = "./---key" + nb
+	fs.writeFileSync(filename, formatting(modulo.toString(16), d.toString(16), p.toString(16), q.toString(16), dp.toString(16), dq.toString(16), qi.toString(16)), err => {
+		console.log(err)
+	})
+	nb++
+	// console.log(modulo.toString(16), e.toString(16), d.toString(16), p.toString(16), q.toString(16), dp.toString(16), dq.toString(16), qi.toString(16))
 }
 
 function replaceAt (string, index, replace) {
