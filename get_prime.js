@@ -1,5 +1,5 @@
 var fs = require('fs')
-var BigInt = require('big-integer')
+var BigInt = require('jsbn').BigInteger
 
 var i = 0
 
@@ -92,9 +92,9 @@ function content_is_prime(contents)
 	// if (i === 124)
 	// 	console.log(contents)
 	var clean = contents.replace(/\:/g, '')
-	var yo = BigInt(clean, 16)
+	var yo = new BigInt(clean, 16)
 	// console.log(yo)
-	console.log("----", yo.isPrime(), i)
+	console.log("----", yo.isProbablePrime(), i)
 	i++
 }
 
@@ -125,7 +125,7 @@ function all_index(contents, index, pattern)
 
 function get_prime()
 {
-	fs.readFile('prime23.txt', 'utf8', function(err, contents) {
+	fs.readFile('prime2.txt', 'utf8', function(err, contents) {
 
 
 	console.log(contents)
@@ -140,14 +140,14 @@ function get_prime()
 	// console.log(index)
 	
 	// swap(index[1], contents)
-	// swap1(index, contents)
+	swap1(index, contents)
 	// console.log(contents.substring(460, 500), '------', contents[480] + contents[481])
 	
-	var clean = contents.replace(/\:/g, '')
-	console.log(clean)
-	var yo = BigInt(clean, 16)
-	console.log(yo)
-	// console.log("----", yo.isPrime())
+	// var clean = contents.replace(/\:/g, '')
+	// console.log(clean)
+	// var yo = new BigInt(clean, 16)
+	// console.log(yo)
+	// console.log("----", yo.isProbablePrime())
 	// console.log(BigInt(contents.replace('s/\:/g', '')))
 	})
 

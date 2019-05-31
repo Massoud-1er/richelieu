@@ -18,6 +18,7 @@
   "homepage": "https://github.com/massoud-1er/Richelieu#readme",
   "dependencies": {
     "big-integer": "^1.6.43",
-    "fs": "0.0.1-security"
+    "fs": "0.0.1-security",
+    "jsbn": "^1.1.0"
   }
 }
