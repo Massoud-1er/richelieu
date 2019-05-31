@@ -20,7 +20,7 @@ function get_info (p, q)
 	q.add(1)
 	qi = q
 	qi.modInverse(p)
-	console.log(modulo, e, d, p, q, dp, dq, qi)
+	console.log(modulo.toString(16), e.toString(16), d.toString(16), p.toString(16), q.toString(16), dp.toString(16), dq.toString(16), qi.toString(16))
 }
 
 function replaceAt (string, index, replace) {
