@@ -125,7 +125,7 @@ function all_index(contents, index, pattern)
 
 function get_prime()
 {
-	fs.readFile('prime23.txt', 'utf8', function(err, contents) {
+	fs.readFile('prime2.txt', 'utf8', function(err, contents) {
 
 
 	console.log(contents)
@@ -140,13 +140,13 @@ function get_prime()
 	// console.log(index)
 	
 	// swap(index[1], contents)
-	// swap1(index, contents)
+	swap1(index, contents)
 	// console.log(contents.substring(460, 500), '------', contents[480] + contents[481])
 	
-	var clean = contents.replace(/\:/g, '')
-	console.log(clean)
-	var yo = BigInt(clean, 16)
-	console.log(yo)
+	// var clean = contents.replace(/\:/g, '')
+	// console.log(clean)
+	// var yo = BigInt(clean, 16)
+	// console.log(yo)
 	// console.log("----", yo.isPrime())
 	// console.log(BigInt(contents.replace('s/\:/g', '')))
 	})
